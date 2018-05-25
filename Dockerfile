@@ -4,7 +4,7 @@ MAINTAINER paladintyrion <paladintyrion@gmail.com>
 
 RUN set -x \
     && apk update \
-    && apk add --no-cache apache2-utils \
+    && apk add --no-cache apache2-utils bash \
     && mkdir -p /usr/local/nginx/conf/passwd \
     && htpasswd -c -b /usr/local/nginx/conf/passwd/kibana.pwd tyrion tyrion \
     && chmod -R +r /usr/local/nginx/conf/passwd
